@@ -10,6 +10,28 @@ Example: the paper says "trained with AdamW, learning rate 1e-4", but `train.py`
 ScholarGraph flags that as a mismatch and shows the exact sentence in the paper and the exact lines
 in the code.
 
+## Screenshots
+
+**Start a verification:** paste an arXiv ID and a GitHub repo, or pick a preset.
+
+![ScholarGraph home screen with the paper and repository inputs](docs/screenshots/home.webp)
+
+**Watch the agents work live:** the full claim queue appears first, then each claim is searched in
+the code and judged. The retry arc lights up when the Critic sends the Detective back for a wider search.
+
+![Live run: agent pipeline, claim queue and per-claim searches and verdicts](docs/screenshots/live-run.webp)
+
+**Scorecard:** every claim with the paper's value next to the code's value, the quoted sentence and
+section from the paper, and the code files used as evidence. This is a real run on
+*Attention Is All You Need* against a community PyTorch implementation.
+
+![Scorecard with agreement ring, counts and claim-by-claim comparison](docs/screenshots/scorecard.webp)
+
+**Agent inspector:** click any agent to see exactly what it did: the paper sections it retrieved,
+the code it found with similarity scores, or every verdict with its reasoning.
+
+![Critic inspector listing each verdict, its reason, and paper vs code values](docs/screenshots/agent-inspector.webp)
+
 ---
 
 ## Why it was built
